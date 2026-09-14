@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo"><span>Andrés Orantes</span></a>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#continuined">Continuing Education</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+
+        </ul>
+        
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <a href="https://github.com/AndresOrantes" target="_blank" class="visit-btn">Visit Github</a>
+
+    </header>
+
+<!-- SECCIÓN 1: HOME  -->
+    <section id="home" class="home">
+        <div class="home-container">
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Andrés Orantes</h1>
+                    <span>Data Scientist</span>
+                </div>
+
+                <!-- BREVE PRESENTACIÓN -->
+                <p class="home-description">
+                    Interested in 
+                </p>
+
+                <div class="btn-group">
+                    <a href="documentos/JAOG_CV_EN.pdf", target="_blank" class="btn">Download CV</a>
+
+                    <a href="#contact" class="btn">Contact</a>
+                </div>
+
+                <div class="socials">
+                    <a href="https://github.com/AndresOrantes" target="_blank">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/andres-orantes/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- SECCIÓN: ABOUT ME -->
+    <section id="about" class="about-me">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="about-container">
+            <img src="Imagenes/FotoAndresGrad.jpeg" alt="Andrés Orantes">
+            
+            <div class="about-content">
+                <p>
+                    Soy un profesional orientado a los datos con experiencia en el procesamiento, análisis y modelado de grandes volúmenes de información utilizando Python, Pandas y Scikit-Learn. Disfruto construyendo puentes entre el análisis teórico y la implementación técnica.
+                    <br><br>
+                    Cuando no estoy entrenando modelos o configurando contenedores en Docker, dedico mi tiempo a optimizar procesos e integrar bases de datos vectoriales para sistemas RAG. Mi objetivo es aportar valor mediante el desarrollo de pipelines de datos limpios y automatizados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Experiencia-->>
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-info">
+            <div class="grid">
+
+                <!--TRABAJO 1-->
+                <div class="grid-card">
+                    <div class="card-icons">
+                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <span class="job-title">Data Analyst</span>
+                    <h3 class="job-date">Since June 2025</h3>
+
+                    <!-- Bullets de Descripcion-->
+                    <ul class="job-description">
+                        <li>Design and build robust data pipelines using apache Airflow to feed the company's Dremio's Data Lake.</li>
+                        <li>Optimize data extraction and transformation workflows</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Apache Airflow</span>
+                        <span class="tech-tag">Dremio</span>
+                        <span class="tech-tag">DataHub</span>
+                    </div>
+                    
+                </div>
+
+                <!--TRABAJO 2-->
+                <div class="grid-card">
+                    <div class="card-icons">
+                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <span class="job-title">Data Analyst</span>
+                    <h3 class="job-date">From August 2023 to June 2025</h3>
+
+                    <!-- Bullets de Descripcion-->
+                    <ul class="job-description">
+                        <li>Management and analysis of large-scale databases using Excel an SAP.</li>
+                        <li>Generated key reports on payroll, recruitment, organizational structure and academic profiles.</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">SAP</span>
+                        <span class="tech-tag">Looker Studio</span>
+                        <span class="tech-tag">Data Analysis</span>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--PROYECTOS-->
+    <section id="projects" class="projects">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-box">
+
+            <!--PROYECTO 1-->
+            <div class="project-card" onclick="openModal(this)">
+                <i class="fa-solid fa-music project-icon"></i>
+                <h3>Spotify Track Predictor</h3>
+                <p> Regression model for popularity prediction</p>
+                <span class="click'text">Click for details</span>
+
+                <!--oculto-->
+                <div class="project-details" style="display: none;">
+                    <img src="Imagenes\placeholder.png" alt="Spotify Project" onerror="this.src='https://via.placeholder.com/400x300?text=Spotify+Project'">
+                    <div class="details-content">
+                        <h3>Spotify Track Popularity Predicto</h3>
+                        <p>Proyecto de Machine Learning supervisado utilizando datos tabulares (características de audio) para predecir la popularidad de las canciones en Spotify. Se implementaron modelos de regresión y se analizó la información utilizando herramientas de perfilado de datos.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-Learn</span>
+                            <span class="tech-tag">ydata-profiling</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" target="_blank" class="btn">Github Repo</a>
+                            <a href="#" target="_blank" class="btn">View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--PROYECTO 2-->
+            <div class="project-card" onclick="openModal(this)">
+                <i class="fa-solid fa-file-pdf project-icon"></i>
+                <h3>LLM RAG for CVs</h3>
+                <p>Sistema de búsqueda inteligente para currículums.</p>
+                <span class="click-text">Click for details</span>
+                
+                <div class="project-details" style="display: none;">
+                    <img src="Imagenes/rag_project.png" alt="RAG Project" onerror="this.src='https://via.placeholder.com/400x300?text=RAG+Project'">
+                    <div class="details-content">
+                        <h3>Retrieval-Augmented Generation for CVs</h3>
+                        <p>Desarrollo de un sistema RAG que procesa documentos (Curriculum Vitae), genera embeddings y los almacena en una base de datos vectorial. Esto permite realizar consultas en lenguaje natural a través de un LLM para extraer información clave de los candidatos de forma automatizada.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">LLMs</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" target="_blank" class="btn">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYECTO 3 -->
+            <div class="project-card" onclick="openModal(this)">
+                <i class="fa-solid fa-chart-line project-icon"></i>
+                <h3>Proyecto 3</h3>
+                <p>Breve descripción del tercer proyecto.</p>
+                <span class="click-text">Click for details</span>
+                
+                <div class="project-details" style="display: none;">
+                    <img src="Imagenes/placeholder.png" alt="Project 3" onerror="this.src='https://via.placeholder.com/400x300?text=Project+3'">
+                    <div class="details-content">
+                        <h3>Título Largo del Proyecto 3</h3>
+                        <p>Descripción detallada de tu tercer proyecto. Explica el problema, la solución arquitectónica y los resultados de negocio o técnicos que lograste.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Tecnología 1</span>
+                            <span class="tech-tag">Tecnología 2</span>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" target="_blank" class="btn">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYECTO 4 (Oculto por defecto) -->
+            <div class="project-card hidden-project" onclick="openModal(this)">
+                <i class="fa-solid fa-database project-icon"></i>
+                <h3>Proyecto 4</h3>
+                <p>Breve descripción del cuarto proyecto.</p>
+                <span class="click-text">Click for details</span>
+                <div class="project-details" style="display: none;">
+                    <img src="Imagenes/placeholder.png" alt="" onerror="this.src='https://via.placeholder.com/400x300'">
+                    <div class="details-content">
+                        <h3>Título Largo 4</h3>
+                        <p>Descripción extensa.</p>
+                        <div class="tech-stack"><span class="tech-tag">SQL</span></div>
+                        <div class="btn-group"><a href="#" target="_blank" class="btn">GitHub Repo</a></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Agrega más proyectos aquí si lo deseas, asegurándote de ponerles la clase "hidden-project" -->
+        </div>
+
+        <button id="seeMoreBtn" class="btn see-more-btn">See More Projects</button>
+
+    </section>
+
+    <!-- ESTRUCTURA DE LA VENTANA EMERGENTE (MODAL) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody" class="modal-body">
+                <!-- El JS inyectará el contenido aquí -->
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- ==============================================
+         EDUCACIÓN FORMAL (Línea de tiempo + Minimalismo)
+    =============================================== -->
+    <section id="education" class="education-section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline-minimal">
+            
+            <!-- MAESTRÍA -->
+            <div class="timeline-item-minimal">
+                <div class="timeline-dot-minimal"></div>
+                
+                <span class="edu-date">Agosto 2025 — Julio 2027</span>
+                <h3 class="edu-title">Maestría en [Tu Área]</h3>
+                <div class="edu-institution">Tec de Monterrey</div>
+                
+                <div class="course-grid">
+                    <div class="course-name">Machine Learning Ops (MLOps)</div>
+                    <div class="tag-group">
+                        <span class="modern-tag">Docker</span>
+                        <span class="modern-tag">MLflow</span>
+                    </div>
+                    
+                    <div class="course-name">Visión Computacional</div>
+                    <div class="tag-group">
+                        <span class="modern-tag">PyTorch</span>
+                        <span class="modern-tag">OpenCV</span>
+                    </div>
+                </div>
+
+                <a href="LINK_AL_SAMP" target="_blank" class="modern-link">View Study Plan (SAMP) &rarr;</a>
+            </div>
+
+            <!-- INGENIERÍA -->
+            <div class="timeline-item-minimal">
+                <div class="timeline-dot-minimal"></div>
+                
+                <span class="edu-date">Agosto 2021 — Junio 2025</span>
+                <h3 class="edu-title">Ingeniería en [Tu Carrera]</h3>
+                <div class="edu-institution">Tec de Monterrey</div>
+                
+                <div class="course-grid">
+                    <div class="course-name">Core Foundations</div>
+                    <div class="tag-group">
+                        <span class="modern-tag">Estadística</span>
+                        <span class="modern-tag">Bases de Datos</span>
+                        <span class="modern-tag">Matemáticas Aplicadas</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==============================================
+         EDUCACIÓN CONTINUA (Tarjetas Editoriales)
+    =============================================== -->
+    <section id="continuined" class="cert-section">
+        <h2 class="section-title">Continuing Education</h2>
+        
+        <div class="editorial-grid">
+            
+            <!-- TARJETA 1 -->
+            <div class="editorial-card">
+                <div class="card-meta">
+                    <span class="meta-year">2026</span>
+                    <span class="meta-type type-track">CAREER TRACK</span>
+                </div>
+                <h3 class="card-title">Associate Python Developer</h3>
+                <div class="card-issuer">DataCamp</div>
+                <p class="card-desc">Ruta intensiva finalizada. Incluye módulos avanzados de manipulación de datos con Pandas, limpieza y programación.</p>
+                <a href="#" target="_blank" class="action-link">View Certificate</a>
+            </div>
+
+            <!-- TARJETA 2 -->
+            <div class="editorial-card">
+                <div class="card-meta">
+                    <span class="meta-year">2026</span>
+                    <span class="meta-type type-course">COURSE</span>
+                </div>
+                <h3 class="card-title">MLOps Concepts</h3>
+                <div class="card-issuer">DataCamp</div>
+                <p class="card-desc">Conceptos fundamentales del ciclo de vida del Machine Learning y versionado de datos en producción.</p>
+                <a href="#" target="_blank" class="action-link">View Certificate</a>
+            </div>
+
+            <!-- TARJETA 3 -->
+            <div class="editorial-card">
+                <div class="card-meta">
+                    <span class="meta-year">2025</span>
+                    <span class="meta-type type-cert">CERTIFICATION</span>
+                </div>
+                <h3 class="card-title">Microsoft Power Automate</h3>
+                <div class="card-issuer">Microsoft Learn</div>
+                <p class="card-desc">Automatización de flujos de trabajo empresariales y optimización de procesos repetitivos.</p>
+                <a href="#" target="_blank" class="action-link">View Credential</a>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        
+        <div class="contact-container">
+            <p class="contact-desc">
+                Click here if you want to contact me.
+            </p>
+
+            <a href="mailto:jagorantes10@gmail.com?subject=Contacto%20desde%20Portafolio" class="mailto-btn">
+                <i class="fa-solid fa-envelope"></i> Send Email
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#continuined">Continuing Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <p class="copyright">© 2026 | Andres Orantes. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
